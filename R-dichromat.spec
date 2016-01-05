@@ -4,7 +4,7 @@
 #
 Name     : R-dichromat
 Version  : 2.0
-Release  : 13
+Release  : 14
 URL      : http://cran.r-project.org/src/contrib/dichromat_2.0-0.tar.gz
 Source0  : http://cran.r-project.org/src/contrib/dichromat_2.0-0.tar.gz
 Summary  : No detailed summary available
