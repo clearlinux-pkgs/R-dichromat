@@ -4,10 +4,10 @@
 #
 Name     : R-dichromat
 Version  : 2.0
-Release  : 22
+Release  : 23
 URL      : http://cran.r-project.org/src/contrib/dichromat_2.0-0.tar.gz
 Source0  : http://cran.r-project.org/src/contrib/dichromat_2.0-0.tar.gz
-Summary  : No detailed summary available
+Summary  : Color Schemes for Dichromats
 Group    : Development/Tools
 License  : GPL-2.0
 BuildRequires : clr-R-helpers
@@ -23,13 +23,20 @@ No detailed description available
 %install
 rm -rf %{buildroot}
 export LANG=C
+export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
+export FCFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
+export FFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
+export CXXFLAGS="$CXXFLAGS -O3 -flto -fno-semantic-interposition "
+export AR=gcc-ar
+export RANLIB=gcc-ranlib
+export LDFLAGS="$LDFLAGS  -Wl,-z -Wl,relro"
 mkdir -p %{buildroot}/usr/lib64/R/library
 R CMD INSTALL --install-tests --build  -l %{buildroot}/usr/lib64/R/library dichromat
 %{__rm} -rf %{buildroot}%{_datadir}/R/library/R.css
 %check
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
-export no_proxy=intel.com,localhost
+export no_proxy=localhost
 export _R_CHECK_FORCE_SUGGESTS_=false
 R CMD check --no-manual --no-examples --no-codoc -l %{buildroot}/usr/lib64/R/library dichromat
 
