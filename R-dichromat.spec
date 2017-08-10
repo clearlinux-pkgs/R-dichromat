@@ -4,7 +4,7 @@
 #
 Name     : R-dichromat
 Version  : 2.0.0
-Release  : 36
+Release  : 37
 URL      : http://cran.r-project.org/src/contrib/dichromat_2.0-0.tar.gz
 Source0  : http://cran.r-project.org/src/contrib/dichromat_2.0-0.tar.gz
 Summary  : Color Schemes for Dichromats
@@ -13,7 +13,7 @@ License  : GPL-2.0
 BuildRequires : clr-R-helpers
 
 %description
-No detailed description available
+the effects of different types of color-blindness.
 
 %prep
 %setup -q -c -n dichromat
@@ -23,11 +23,11 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1496605540
+export SOURCE_DATE_EPOCH=1502398780
 
 %install
 rm -rf %{buildroot}
-export SOURCE_DATE_EPOCH=1496605540
+export SOURCE_DATE_EPOCH=1502398780
 export LANG=C
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
 export FCFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
