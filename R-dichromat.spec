@@ -4,7 +4,7 @@
 #
 Name     : R-dichromat
 Version  : 2.0.0
-Release  : 51
+Release  : 52
 URL      : http://cran.r-project.org/src/contrib/dichromat_2.0-0.tar.gz
 Source0  : http://cran.r-project.org/src/contrib/dichromat_2.0-0.tar.gz
 Summary  : Color Schemes for Dichromats
