@@ -4,9 +4,9 @@
 #
 Name     : R-dichromat
 Version  : 2.0.0
-Release  : 58
-URL      : http://cran.r-project.org/src/contrib/dichromat_2.0-0.tar.gz
-Source0  : http://cran.r-project.org/src/contrib/dichromat_2.0-0.tar.gz
+Release  : 59
+URL      : https://cran.r-project.org/src/contrib/dichromat_2.0-0.tar.gz
+Source0  : https://cran.r-project.org/src/contrib/dichromat_2.0-0.tar.gz
 Summary  : Color Schemes for Dichromats
 Group    : Development/Tools
 License  : GPL-2.0
@@ -23,10 +23,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1552751164
+export SOURCE_DATE_EPOCH=1552919473
 
 %install
-export SOURCE_DATE_EPOCH=1552751164
+export SOURCE_DATE_EPOCH=1552919473
 rm -rf %{buildroot}
 export LANG=C
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
